@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./musicPlayer.css">
+</head>
+<body>
+    <nav id="nav-bar">
+        <h1>Music Player</h1>
+        <div id="toggleandsearch"> 
+            <label>
+                <input type="text" id="searchBar" onchange="searchSong()" placeholder="search a song"/>
+            </label>
+        <label id="toggleContainer">
+            <input type="checkbox" id="toggleCheck" />
+            <span id="toggleButton"></span>
+        </label>
+    </div>
+    </nav>
+    <div id="mainContainer">
+        <section id="allSongsSection">
+            <div id="filterContainer">
+            <label for="dropDown" id="dropDownLabel">Filter by Genre: &nbsp;</label> 
+            <select id="genreSelect" class="dropDown" onchange="handleFilter()">
+                <option value="all" selected>All</option>
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="hiphop">Hip Hop</option>
+            </select>
+        </div>
+
+            <h3 id="allsongstitle">All Songs</h3>
+            <li id="songshowslist">
+
+            </li>
+
+        </section>
+        <section id="songcard">
+            <div id="screen">
+                <img src="https://i.ytimg.com/vi/JGwWNGJdvx8/sddefault.jpg" id="screenImg"/>
+                <h3 id="songName">Shape Of You</h3>
+                <p id="singerName">Ed Sheeran</p>
+
+            </div>
+            <audio id="audio" controls>
+
+            </audio>
+            <div id="buttonContainer">
+                <button id="backButton" class="buttonBack" onclick="previousSong()">&#8592</button>
+                <button id="forwardButton" class="buttonBack" onclick="nextSong()">&#8594</button>
+            </div>
+
+            <button id="addPlaylist" class="addPlaylist" onclick="addPlayList()">Add to Playlist</button>
+        </section>
+        <section id="playlistSection">
+            <div>
+            <input type="text" id="createInput" class="createInput" placeholder="Enter Playlist Name" />
+            <button id="createPlaylistbtn" class="createPlaylistbtn" onclick="createPlayAlbum()">Create Playlist</button>
+        </div>
+            <div id="playListContainer">
+            <div id="currentPlay">
+                <h2>Current Playlist</h2>
+                <li id="addSongFromTheCurrent">
+                <!-- <button class="songplaylist" id="addplaysong">Song1</button> -->
+                </li>
+            </div>
+            <div id="allPlaylistContainer">
+                <h2>All Playlist</h2>
+                <!-- <button class="songplaylist">Song2</button> -->
+            </div>
+        </div>
+        </section>
+
+    </div>
+    <script type="module" src="./musicPlayer.js" defer></script>
+</body>
+</html>

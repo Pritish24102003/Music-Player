@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#nav-bar{
+    background-color: #6db955;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    height: 60px;
+}
+#toggleContainer{
+    height: 30px;
+    width: 60px;
+    border-radius: 15px; 
+    position: relative;
+    display: inline-block;
+}
+#toggleCheck{
+    opacity: 0;
+    width: 0;
+    height: 0;
+    
+}
+#toggleButton{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-radius: 15px;
+}
+#toggleButton::before{
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-color: wheat;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 2px;
+    transition: .5s;
+}
+#toggleCheck:checked + #toggleButton::before{
+    transform: translateX(26px);
+}
+
+
+/* main container */
+#mainContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    flex-wrap: nowrap;
+}
+
+/* section 1 */
+#allSongsSection{
+    background-color: #6bb8de;
+    width: 30%;
+    height: 100vh;
+    border-radius: 5px;
+    margin-top: 2%;
+}
+#filterContainer{
+    margin-top: 10%;
+    margin-left: 5%;
+}
+.dropDown{
+    background-color: #3e718a;
+    padding: 2%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+#allsongstitle{
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+#songshowslist{
+    list-style: none;
+}
+.songList{
+    margin-top: 2%;
+    margin-left: 5%;
+    background-color: #0b81bc;
+    padding: 2% 20% 2% 20%;
+    border-radius: 5px;
+    color: wheat;
+    border: none;
+    font-size: 18px;
+}
+
+.songList:hover{
+    background-color: transparent;
+}
+
+/* section 2 */
+
+#songcard{
+    background-color: #6bb8de;
+    width: 35%;
+    margin-top: 2%;
+    border-radius: 5px;
+    box-shadow: -3px -3px #816ca5;
+}
+
+#screen{
+    width: 90%;
+    margin: auto;
+    height: 380px;
+    background-color: #0573ab;
+    margin-top: 5%;
+    box-shadow: -3px -3px #816ca5;
+    border-radius: 10px;
+    background-size: cover;
+}
+#screenImg{
+    width: 100%;
+    max-height: 80%;
+    object-fit: cover;
+    opacity: 0.9;
+    margin: auto;
+    border-radius: 10px;
+}
+#songName{
+    margin-top: 1%;
+    margin-left: 2%;
+    font-size: 2rem;
+}
+#singerName{
+    margin-left: 2%;
+}
+
+#audio{
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+#buttonContainer{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+.buttonBack{
+    background-color: blueviolet;
+    padding: 3% 5% 3% 5%;
+    margin: 1%;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.addPlaylist{
+    background-color: blueviolet;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 2%;
+    padding: 3% 5% 3% 5%;
+    color: white;
+    font-weight: bolder;
+    border: none;
+}
+
+/* section 3 */
+#playlistSection{
+    margin-top: 2%;
+    width: 30%;
+    height: 100vh;
+}
+#playListContainer{
+    margin-top: 3%;
+    background-color: #6bb8de;
+    height: 100vh;
+    border-radius: 5px;
+    box-shadow: -3px -3px #816ca5;
+    width: 80%;
+}
+.createInput{
+    width: 50%;
+    padding: 2%;
+}
+.createPlaylistbtn{
+    background-color: blueviolet;
+    padding: 2% 5% 2% 5%;
+}
+#currentPlay{
+    margin-left: 5%;
+    padding-top: 10%;
+}
+.songplaylist{
+    margin-top: 4%;
+    width: 80%;
+    background-color: #0b81bc;
+    padding: 3% 5% 3% 5%;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+.songplaylist:hover{
+    background-color: transparent;
+}
+#allPlaylistContainer{
+    margin-left: 5%;
+    margin-top: 10%;
+}
+#addSongFromTheCurrent{
+    list-style: none;
+}
